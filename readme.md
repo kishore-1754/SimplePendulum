@@ -42,14 +42,6 @@ SciPy’s adaptive Runge-Kutta-Fehlberg solver (`RK45`) is used as a reference s
 
 ---
 
-# Error Analysis
-
-The error is computed as:
-
-\[
-E(t)=\theta_{RK4}(t)-\theta_{RK45}(t)
-\]
-
 Observations from the simulation:
 
 - The RK4 implementation closely follows SciPy’s RK45 solution
