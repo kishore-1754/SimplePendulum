@@ -26,22 +26,21 @@ The simulation also includes:
 
 The pendulum is modeled using the equation:
 
-:contentReference[oaicite:0]{index=0}
-
-where:
-
-- \( \theta \) = angular displacement
-- \( g \) = gravitational acceleration
-- \( L \) = length of pendulum
+\[
+\theta'' + \frac{g}{L}\sin(\theta)=0
+\]
 
 The system is rewritten as two first-order differential equations:
 
-:contentReference[oaicite:1]{index=1}
+\[
+\frac{d\theta}{dt} = \omega
+\]
 
-:contentReference[oaicite:2]{index=2}
+\[
+\frac{d\omega}{dt} = -\frac{g}{L}\sin(\theta)
+\]
 
 ---
-
 # Assumptions
 
 - No damping or air resistance
@@ -60,20 +59,27 @@ The project implements the classical 4th-order Runge-Kutta method manually.
 
 General RK4 update formula:
 
-:contentReference[oaicite:3]{index=3}
+\[
+y_{n+1}=y_n+\frac{1}{6}(k_1+2k_2+2k_3+k_4)
+\]
 
 where:
 
-:contentReference[oaicite:4]{index=4}
+\[
+k_1 = h f(x_n, y_n)
+\]
 
-:contentReference[oaicite:5]{index=5}
+\[
+k_2 = h f\left(x_n+\frac{h}{2}, y_n+\frac{k_1}{2}\right)
+\]
 
-:contentReference[oaicite:6]{index=6}
+\[
+k_3 = h f\left(x_n+\frac{h}{2}, y_n+\frac{k_2}{2}\right)
+\]
 
-:contentReference[oaicite:7]{index=7}
-
----
-
+\[
+k_4 = h f(x_n+h, y_n+k_3)
+\]
 ## SciPy RK45 Solver
 
 SciPy’s adaptive Runge-Kutta-Fehlberg solver (`RK45`) is used as a reference solution for comparison.
@@ -84,7 +90,9 @@ SciPy’s adaptive Runge-Kutta-Fehlberg solver (`RK45`) is used as a reference s
 
 The error is computed as:
 
-:contentReference[oaicite:8]{index=8}
+\[
+E(t)=\theta_{RK4}(t)-\theta_{RK45}(t)
+\]
 
 Observations from the simulation:
 
