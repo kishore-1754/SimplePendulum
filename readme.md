@@ -55,7 +55,7 @@ Observations from the simulation:
 Clone the repository:
 
 ```bash
-git clone https://github.com/kishore-1754/SimplePendulum.git
+git clone https://github.com/kishore-1754/SimplePendulum.git && cd SimplePendulum
 ````
 
 Install dependencies:
@@ -70,7 +70,7 @@ pip install -r requirements.txt
 Run the program using:
 
 ```bash
-python main.py
+python Pendulum.py
 ```
 
 You will be prompted to enter:
