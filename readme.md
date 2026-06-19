@@ -97,16 +97,6 @@ The simulation window displays:
 
 ---
 
-# Coordinate Transformation
-
-The pendulum coordinates are computed using:
-
-x=L\sin(\theta)
-
-y=-L\cos(\theta)
-
----
-
 # License
 
 This project is open-source and available under the MIT License.
