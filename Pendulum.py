@@ -44,7 +44,7 @@ sol = solve_ivp(
 thetaB = sol.y[0]
 omegaB = sol.y[1]
 
-## Finding absolute error (Builtin - implemented)
+## Finding error (Builtin - implemented)
 error = state[:,0] - thetaB
 
 
