@@ -1,5 +1,5 @@
 # Simple Pendulum Simulation using RK4
-![Pendulum](2026-06-19T21:19:31,911544793+05:30.png)
+![Pendulum](Pendulum.png)
 This project implements the classical **4th Order Runge-Kutta (RK4)** numerical integration method in Python and compares its performance against SciPy’s built-in **RK45** solver for simulating the motion of a simple pendulum.
 
 The simulation also includes:
